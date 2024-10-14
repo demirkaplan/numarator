@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\alert.mp3",
+      "PackagePath": "staticwebassets\\alert.mp3"
+    },
+    {
+      "Id": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\numbers.html",
+      "PackagePath": "staticwebassets\\numbers.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebNumarator.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebNumarator.props",
+      "PackagePath": "build\\WebNumarator.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebNumarator.props",
+      "PackagePath": "buildMultiTargeting\\WebNumarator.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebNumarator.props",
+      "PackagePath": "buildTransitive\\WebNumarator.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

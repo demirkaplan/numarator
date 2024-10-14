@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "HYeKrMZklHoHSSUnxQtVH7QM9AVw79ErPyparIxO9uk=",
+  "Source": "WebNumarator",
+  "BasePath": "_content/WebNumarator",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebNumarator\\wwwroot",
+      "Source": "WebNumarator",
+      "ContentRoot": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\",
+      "BasePath": "_content/WebNumarator",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\alert.mp3",
+      "SourceId": "WebNumarator",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\",
+      "BasePath": "_content/WebNumarator",
+      "RelativePath": "alert.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\alert.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\index.html",
+      "SourceId": "WebNumarator",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\",
+      "BasePath": "_content/WebNumarator",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\numbers.html",
+      "SourceId": "WebNumarator",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\demir\\Desktop\\WebNumarator\\wwwroot\\",
+      "BasePath": "_content/WebNumarator",
+      "RelativePath": "numbers.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\numbers.html"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numaralar Ekranı</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Numaralar Ekranı</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>Numara</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody id="numberTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let lastNumbers = []; // Önceki numara listesini saklar
+        let isFirstLoad = true; // İlk yüklemeyi kontrol etmek için
+
+        function fetchNumbers() {
+            fetch('/api/numbers')
+                .then(response => response.json())
+                .then(numbers => {
+                    const tableBody = document.getElementById('numberTableBody');
+                    tableBody.innerHTML = ''; // Tabloyu temizle
+
+                    // Numaraları tabloya ekle
+                    numbers.forEach((numara, index) => {
+                        const tr = document.createElement('tr');
+                        const numberCell = document.createElement('td');
+                        const statusCell = document.createElement('td');
+
+                        // Numara ekle
+                        numberCell.textContent = numara;
+                        tr.appendChild(numberCell);
+
+                        // Durum ekle
+                        if (index === numbers.length - 1) {
+                            statusCell.textContent = "Son Eklenen";
+                        } else {
+                            statusCell.textContent = "-";
+                        }
+                        tr.appendChild(statusCell);
+
+                        tableBody.appendChild(tr);
+                    });
+
+                    // İlk yükleme ise ses çalmadan sadece tabloyu güncelle
+                    if (!isFirstLoad && hasNewNumber(numbers)) {
+                        const audio = new Audio('/alert.mp3');
+                        audio.play().catch(error => {
+                            console.error("Ses dosyası oynatılamadı:", error);
+                        });
+                    }
+
+                    // Son numara listesini güncelle
+                    lastNumbers = [...numbers]; // Listeyi klonla
+
+                    // İlk yükleme kontrolünü kaldır
+                    isFirstLoad = false;
+                })
+                .catch(error => {
+                    console.error("Numaralar alınamadı:", error);
+                });
+        }
+
+        // Yeni numara kontrolü: Eski ve yeni listeyi karşılaştırır
+        function hasNewNumber(currentNumbers) {
+            if (currentNumbers.length !== lastNumbers.length) return true; // Boyut farkı varsa yeni numara vardır
+
+            for (let i = 0; i < currentNumbers.length; i++) {
+                if (currentNumbers[i] !== lastNumbers[i]) return true; // İçerik farkı varsa yeni numara vardır
+            }
+            return false; // Fark yoksa false döner
+        }
+
+        // Her 5 saniyede bir numaraları güncelle
+        setInterval(fetchNumbers, 5000);
+    </script>
+</body>
+</html>
